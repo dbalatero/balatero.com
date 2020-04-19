@@ -1,5 +1,9 @@
+const pluginSass = require("eleventy-plugin-sass");
+
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("assets/images");
+
+  eleventyConfig.addPlugin(pluginSass);
 
   return {
     dir: {

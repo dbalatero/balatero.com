@@ -1,0 +1,24 @@
+/* original styles */
+body {
+  font-family: "New York", "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#content { max-width: 1000px; }
+
+p { margin: 20px 0; }
+
+.count-it-up-fuzzball { margin-top: 25px; }
+.garrett { font-size: 2px; }
+
+h1.name { margin-top: 0; margin-bottom: 0.1em; font-size: 3em; }
+h2.skills { margin-top: 0; margin-bottom: 0.1em; font-size: 1.75em; }
+
+header {
+  display: flex;
+}
+
+header .photo {}
+header .info { margin-left: 1em; }
+/* end original styles */
