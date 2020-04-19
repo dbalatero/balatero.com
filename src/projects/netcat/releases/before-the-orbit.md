@@ -1,8 +1,8 @@
 ---
 tags:
   - releases
+  - singles
   - netcat
-  - single
 layout: release
 title: netcat - Before the Orbit
 date: 2020-01-21

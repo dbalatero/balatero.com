@@ -1,8 +1,8 @@
 ---
 tags:
   - releases
+  - singles
   - natural-motion
-  - single
 layout: release
 title: Natural Motion - When U Know
 date: 2018-10-03

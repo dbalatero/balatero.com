@@ -1,8 +1,8 @@
 ---
 tags:
   - releases
+  - albums
   - netcat
-  - album
 layout: release
 title: netcat - Cycles Per Instruction
 date: 2014-04-18

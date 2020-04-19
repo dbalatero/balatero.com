@@ -7,12 +7,28 @@ layout: main
   {{ content | safe }}
 
   {% set releases = collections.releases | withTag(project) %}
-  {% if releases.length > 0 %}
-    <h2>Releases</h2>
+  {% set albums = releases | withTag("albums") %}
+  {% set singles = releases | withTag("singles") %}
+
+  {% if albums.length > 0 %}
+    <h2>Albums</h2>
     <ul>
-      {% for release in releases | reverse %}
+      {% for release in albums | reverse %}
         <li>
           <a href="{{ release.url }}">{{ release.data.title }}</a>
+          [{{ release.date.toLocaleDateString() }}]
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if singles.length > 0 %}
+    <h2>Singles</h2>
+    <ul>
+      {% for release in singles | reverse %}
+        <li>
+          <a href="{{ release.url }}">{{ release.data.title }}</a>
+          [{{ release.date.toLocaleDateString() }}]
         </li>
       {% endfor %}
     </ul>
