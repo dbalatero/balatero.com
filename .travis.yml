@@ -13,7 +13,7 @@ script:
   - eleventy
 deploy:
   provider: script
-  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./dist
+  script: netlify deploy -p -s $NETLIFY_SITE_ID -a $NETLIFY_ACCESS_TOKEN -d ./dist
   skip_cleanup: true
   on:
     branch: master
