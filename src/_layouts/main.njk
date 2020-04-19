@@ -1,11 +1,31 @@
 <html>
 <head>
-  <title>david balatero | brooklyn, ny | {{ title }}</title>
+  <title>david balatero | {{ title }}</title>
   <meta content='I am a cellist and electric bass player living in Brooklyn. My projects include: SGF, netcat, Song Sparrow Research, and Operation ID.' name='description'>
   <meta content='index,follow' name='robots'>
   <link rel="stylesheet" href="/assets/styles/index.css" />
 </head>
 <body>
-  {{ content | safe }}
+  <div id='content'>
+    <header>
+      <div class='photo'>
+        <img src='/assets/images/david_bw.jpg' />
+      </div>
+
+      <div class='info'>
+        <h1 class='name'>David Balatero</h1>
+        <h2 class='skills'>cello / bass / piano / synths / code / brooklyn, ny</h2>
+      </div>
+    </header>
+
+    {{ content | safe }}
+
+    <footer>
+      <hr />
+      <a href="https://github.com/dbalatero/balatero.com" target="_blank">
+        Source code for this site
+      </a>
+    </footer>
+  </div>
 </body>
 </html>

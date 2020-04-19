@@ -10,7 +10,6 @@ body {
 p { margin: 20px 0; }
 
 .count-it-up-fuzzball { margin-top: 25px; }
-.garrett { font-size: 2px; }
 
 h1.name { margin-top: 0; margin-bottom: 0.1em; font-size: 3em; }
 h2.skills { margin-top: 0; margin-bottom: 0.1em; font-size: 1.75em; }
@@ -22,3 +21,11 @@ header {
 header .photo {}
 header .info { margin-left: 1em; }
 /* end original styles */
+
+.release {
+  .release__information {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

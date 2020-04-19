@@ -1,0 +1,19 @@
+---
+layout: main
+---
+<div class="release">
+  <h1>{{ title }}</h1>
+
+  <ul class="release__information">
+    <li><strong>Released</strong> on {{ page.date.toDateString() }}</li>
+    <li><strong>Formats</strong> {{ formats.join(', ') }}
+  </ul>
+
+  {{ content | safe }}
+
+  {% if bandcamp %}
+    <iframe style="border: 0; width: 100%; height: 120px;" src="{{ bandcamp.embed_src }}" seamless>
+      <a href="{{ bandcamp.link.href }}">{{ bandcamp.link.label }}</a>
+    </iframe>
+  {% endif %}
+</div>
