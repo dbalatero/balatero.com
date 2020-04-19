@@ -5,8 +5,17 @@ layout: main
   <h1>{{ title }}</h1>
 
   <ul class="release__information">
-    <li><strong>Released</strong> on {{ page.date.toDateString() }}</li>
-    <li><strong>Formats</strong> {{ formats.join(', ') }}
+    <li><strong>Released</strong> {{ page.date.toDateString() }}</li>
+    <li>
+      {% if formats.length > 1 %}
+        <strong>Formats</strong> {{ formats.join(', ') }}
+      {% else %}
+        <strong>Format</strong> {{ formats }}
+      {% endif %}
+    </li>
+    <li>
+      <a href="{{ external.href }}" target="_blank">{{ external.label }}</a>
+    </li>
   </ul>
 
   {{ content | safe }}

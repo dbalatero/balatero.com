@@ -11,7 +11,9 @@ bandcamp:
     href: https://netcat.bandcamp.com/album/cycles-per-instruction
     label: Cycles Per Instruction by netcat
   embed_src: http://bandcamp.com/EmbeddedPlayer/album=3199598991/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/
-external_href: https://netcat.bandcamp.com/album/cycles-per-instruction
+external:
+  href: https://netcat.bandcamp.com/album/cycles-per-instruction
+  label: Listen on Bandcamp
 formats:
   - cassette
   - digital
