@@ -14,7 +14,6 @@ p { margin: 20px 0; }
 .count-it-up-fuzzball { margin-top: 25px; }
 
 h1.name { margin-top: 0; margin-bottom: 0.1em; font-size: 3em; }
-h2.skills { margin-top: 0; margin-bottom: 0.1em; font-size: 1.75em; }
 
 header {
   display: flex;
@@ -64,5 +63,24 @@ footer {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+}
+
+header {
+  ul.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      display: block;
+      flex: 0;
+      margin-left: 1rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
   }
 }
