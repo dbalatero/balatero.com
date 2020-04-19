@@ -1,0 +1,30 @@
+---
+layout: main
+---
+<div class="project">
+  <h1>{{ title }}</h1>
+
+  {{ content | safe }}
+
+  {% set releases = collections.releases | withTag(project) %}
+  {% if releases.length > 0 %}
+    <h2>Releases</h2>
+    <ul>
+      {% for release in releases | reverse %}
+        <li>
+          <a href="{{ release.url }}">{{ release.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if personnel %}
+    <h2>Personnel</h2>
+
+    <ul>
+      {% for person in personnel %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

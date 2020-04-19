@@ -1,6 +1,6 @@
 ---
 tags:
-  - release
+  - releases
   - netcat
   - single
 layout: release
