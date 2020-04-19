@@ -9,6 +9,19 @@ layout: main
   {% set releases = collections.releases | withTag(project) %}
   {% set albums = releases | withTag("albums") %}
   {% set singles = releases | withTag("singles") %}
+  {% set videos = releases | withTag("videos") %}
+
+  {% if videos.length > 0 %}
+    <h2>Videos</h2>
+    <ul>
+      {% for release in videos | reverse %}
+        <li>
+          <a href="{{ release.url }}">{{ release.data.title }}</a>
+          [{{ release.date.toLocaleDateString() }}]
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
   {% if albums.length > 0 %}
     <h2>Albums</h2>
