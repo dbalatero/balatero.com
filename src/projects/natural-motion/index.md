@@ -1,7 +1,7 @@
 ---
 layout: project
 tags:
-  - project
+  - projects
 title: Natural Motion
 project: natural-motion
 homepage: https://naturalmotion.bandcamp.com

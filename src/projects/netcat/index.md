@@ -1,7 +1,7 @@
 ---
 layout: project
 tags:
-  - project
+  - projects
 title: netcat
 project: netcat
 homepage: http://netcat.co

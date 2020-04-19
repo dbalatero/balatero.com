@@ -1,0 +1,14 @@
+---
+layout: main
+title: projects
+---
+
+<h1>Projects</h1>
+
+<ul>
+  {% for project in collections.projects %}
+    <li>
+      <a href="{{ project.url }}">{{ project.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

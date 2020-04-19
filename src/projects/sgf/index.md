@@ -1,7 +1,7 @@
 ---
 layout: project
 tags:
-  - project
+  - projects
 title: SGF
 project: sgf
 homepage: https://sgfsounds.bandcamp.com
