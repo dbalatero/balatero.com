@@ -1,0 +1,17 @@
+---
+layout: main
+title: releases
+---
+
+<h1>Releases</h1>
+
+<p>This is a chronological list of all releases, across all projects.</p>
+
+<ul>
+  {% for release in collections.releases | reverse %}
+    <li>
+      <a href="{{ release.url }}">{{ release.data.title }}</a>
+      [{{ release.date.toLocaleDateString() }}]
+    </li>
+  {% endfor %}
+</ul>
