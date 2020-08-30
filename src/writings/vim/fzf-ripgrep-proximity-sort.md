@@ -9,7 +9,7 @@ tags:
 ---
 
 I work in a large monorepo, and I was pretty sick of typing my team's project
-directory whenever I wanted to use FZF to search for and open another file.
+directory whenever I wanted to use [fzf.vim](https://github.com/junegunn/fzf.vim) to search for and open another file.
 
 Enter [proximity-sort](https://github.com/jonhoo/proximity-sort). This tool
 will sort a list of files by the proximity to a given file.
