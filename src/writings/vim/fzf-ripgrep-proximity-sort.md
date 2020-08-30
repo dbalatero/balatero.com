@@ -18,7 +18,7 @@ will sort a list of files by the proximity to a given file.
 
 You'll need Rust if you don't have it:
 
-```sh
+```bash
 brew install rustup
 rustup-init -y
 source $HOME/.cargo/env
@@ -30,14 +30,14 @@ echo '[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env' > \
 
 Once you have Rust on your system, you just need:
 
-```sh
+```bash
 cargo install proximity-sort
 ```
 
 It's not bad to use: you just pipe a list of files into it, and give it a
 target file to bias search results around. Something like:
 
-```
+```bash
 $ rg --files | proximity-sort lib/project/current/file.rb
 ```
 
@@ -69,7 +69,8 @@ Mine looks like this:
 
 ```vim
 " ctrl p brings up the file finder
-noremap <C-p> :call fzf#vim#files('', { 'source': g:FzfFilesSource(),
+noremap <C-p> :call fzf#vim#files('', {
+      \ 'source': g:FzfFilesSource(),
       \ 'options': '--tiebreak=index'})<CR>
 ```
 

@@ -9,6 +9,8 @@ $text-color: $color-dark-gray;
 $link-color: $color-medium-blue;
 $link-hover-color: $color-dark-blue;
 
+@import "prism.scss";
+
 /* original styles */
 body {
   font-family: "New York", "Times New Roman", serif;
