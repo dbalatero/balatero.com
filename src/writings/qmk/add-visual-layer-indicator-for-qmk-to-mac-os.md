@@ -338,3 +338,5 @@ end)
 ```
 
 </div>
+
+Reload your Hammerspoon config, and you should see your new layer indicator overlayed on top of the Mac system menu bar!
