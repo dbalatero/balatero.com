@@ -14,7 +14,7 @@ directory whenever I wanted to use [fzf.vim](https://github.com/junegunn/fzf.vim
 Enter [proximity-sort](https://github.com/jonhoo/proximity-sort). This tool
 will sort a list of files by the proximity to a given file.
 
-# Installing
+## Installing
 
 You'll need Rust if you don't have it:
 
@@ -45,7 +45,7 @@ and `proximity-sort` will reorder the search results based on distance to
 `lib/project/current`. Give it a try manually in your shell first so you can
 understand how the output changes as a result.
 
-# Configuring vim
+## Configuring vim
 
 You can add a function to give FZF the file list. When you're in the root
 directory, it will just use `rg --files`. When you're in a buffer containing a

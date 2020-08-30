@@ -19,7 +19,8 @@ body {
   color: $text-color;
 }
 
-#content { max-width: 1000px; }
+#root { max-width: 1000px; }
+#content { margin-left: 1em; }
 
 p { margin: 20px 0; }
 

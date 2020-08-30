@@ -28,7 +28,7 @@ The basic approach is:
 1. When a layer is enabled, send an extra silent key to the operating system
 1. Add a hotkey listener in Hammerspoon to intercept that silent key, and update the layer indicator
 
-# Step 1: Send a key when the layer switches
+## Step 1: Send a key when the layer switches
 
 The first step is to send a key from the QMK firmware to the operating system
 when a layer is switched. Luckily, `F13` through `F20` are unused keys on MacOS, and you
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 </div>
 
-# Step 2: Test the F17 and F18 keys
+## Step 2: Test the F17 and F18 keys
 
 You can quickly test the `F17` and `F18` keys are working by adding a quick hotkey bind to `~/.hammerspoon/init.lua`:
 
@@ -143,7 +143,7 @@ end)
 
 Reload Hammerspoon, and tap whatever key you assigned to `TOGGLE_RAISE`. You should see the alerts from Hammerspoon.
 
-# Step 3: Show an indicator with Hammerspoon
+## Step 3: Show an indicator with Hammerspoon
 
 I put together a little Lua object that will draw the layer indicator in the top center of the screen.
 

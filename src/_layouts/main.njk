@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="/assets/styles/index.css" />
 </head>
 <body>
-  <div id='content'>
+  <div id='root'>
     <header>
       <div class='photo'>
         <img src='/assets/images/david_bw.jpg' />
@@ -24,7 +24,9 @@
       </div>
     </header>
 
-    {{ content | safe }}
+    <div id="content">
+      {{ content | safe }}
+    </div>
 
     <footer>
       &copy; 2020 David Balatero &lt;d AT this domain dot com&gt;
