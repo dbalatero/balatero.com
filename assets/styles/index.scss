@@ -122,3 +122,49 @@ header {
   border-radius: 4px;
   display: inline-block;
 }
+
+/* inline code */
+:not(pre) > code {
+  padding: 1px 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  background: #f5f2f0;
+}
+
+figure {
+  display: block;
+  position: relative;
+  margin-left: 1em;
+  text-align: center;
+  background-color: #fdf6e3;
+  max-width: 700px;
+  padding: 0.75rem;
+
+  figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+}
+
+[data-prism-file] {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: attr(data-prism-file);
+    background: #fdf6e3 url(/assets/images/file-icon.svg) no-repeat 1em 0.45em;
+    background-size: 0.9em;
+    width: auto;
+    padding-left: 2.25em;
+    padding-top: 0.25em;
+    border-radius: 0;
+    border-radius-top-left: .3em;
+    border-radius-top-right: .3em;
+    font-size: 0.85em;
+    font-style: italic;
+  }
+
+  pre {
+    margin: 0;
+  }
+}

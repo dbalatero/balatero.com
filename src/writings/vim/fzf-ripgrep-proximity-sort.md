@@ -51,6 +51,8 @@ You can add a function to give FZF the file list. When you're in the root
 directory, it will just use `rg --files`. When you're in a buffer containing a
 file in a sub-directory, it will use that sub-directory to proximity sort.
 
+<div data-prism-file="~/.vimrc">
+
 ```vim
 function! g:FzfFilesSource()
   let l:base = fnamemodify(expand('%'), ':h:.:S')
@@ -64,8 +66,12 @@ function! g:FzfFilesSource()
 endfunction
 ```
 
+</div>
+
 The final thing you have to do is update your FZF shortcut to use the function.
 Mine looks like this:
+
+<div data-prism-file="~/.vimrc">
 
 ```vim
 " ctrl p brings up the file finder
@@ -73,5 +79,7 @@ noremap <C-p> :call fzf#vim#files('', {
       \ 'source': g:FzfFilesSource(),
       \ 'options': '--tiebreak=index'})<CR>
 ```
+
+</div>
 
 Reload your Vim config and try it out!
