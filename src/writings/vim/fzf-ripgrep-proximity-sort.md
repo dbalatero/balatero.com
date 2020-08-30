@@ -3,9 +3,8 @@ layout: article
 date: 2020-08-30
 title: Sorting FZF results in Vim by proximity to current buffer
 tags:
+  - writings
   - vim
-  - articles
-  - til
   - fzf
 ---
 

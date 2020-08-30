@@ -1,10 +1,20 @@
-$link-color: blue;
+/* https://coolors.co/3c3744-090c9b-3d52d5-b4c5e4-fbfff1 */
+$color-white: #FBFFF1;
+$color-light-blue: #B4C5E4;
+$color-medium-blue: #3D52D5;
+$color-dark-blue: #090C9B;
+$color-dark-gray: #3C3744;
+
+$text-color: $color-dark-gray;
+$link-color: $color-medium-blue;
+$link-hover-color: $color-dark-blue;
 
 /* original styles */
 body {
   font-family: "New York", "Times New Roman", serif;
   font-size: 20px;
   line-height: 1.4;
+  color: $text-color;
 }
 
 #content { max-width: 1000px; }
@@ -27,25 +37,30 @@ a, a:visited {
   background: transparent;
   color: $link-color;
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 a:hover {
-  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
-              rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
-  background-size: 600vw 600vw;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  animation: slide 10s linear infinite forwards;
+  color: $link-hover-color;
 }
 
-@keyframes slide {
-  0%{
-    background-position-x: 0%;
-  }
-  100%{
-    background-position-x: 600vw;
-  }
-}
+// a:hover {
+//   background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+//               rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+//   background-size: 600vw 600vw;
+//   -webkit-text-fill-color: transparent;
+//   -webkit-background-clip: text;
+//   animation: slide 10s linear infinite forwards;
+// }
+
+// @keyframes slide {
+//   0%{
+//     background-position-x: 0%;
+//   }
+//   100%{
+//     background-position-x: 600vw;
+//   }
+// }
 
 blockquote {
   font-style: italic;
@@ -89,4 +104,19 @@ header {
   font-family: monospace;
   display: inline-block;
   margin-right: 1rem;
+}
+
+.tag-list {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.tag-list__tag {
+  background: #777;
+  color: #eee;
+  text-decoration: none;
+  cursor: none;
+  padding: 0 0.25rem;
+  border-radius: 4px;
+  display: inline-block;
 }
