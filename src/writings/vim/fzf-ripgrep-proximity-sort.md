@@ -2,6 +2,11 @@
 layout: article
 date: 2020-08-30
 title: Sorting FZF results in Vim by proximity to current buffer
+excerpt: >
+  If you have a large monorepo, it can be handy to sort your FZF file search
+  results by proximity to the file open in your current buffer. This ensures
+  that you tend to find files within your own team's immediate directories,
+  instead of getting random file results from across your large codebase.
 tags:
   - writings
   - vim

@@ -1,5 +1,8 @@
 ---
 layout: article
+excerpt: >
+  Learn how to visually show what QMK layer is active by adding a floating
+  indicator to MacOS, using Hammerspoon.
 date: 2020-08-30
 title: Add QMK visual layer indicator using Hammerspoon
 tags:

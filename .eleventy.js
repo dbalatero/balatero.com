@@ -1,4 +1,5 @@
 const pluginSass = require("eleventy-plugin-sass");
+const pluginSEO = require("eleventy-plugin-seo");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 function withTag(array, tag) {
@@ -13,6 +14,16 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight, {
     alwaysWrapLineHighlights: false,
+  });
+
+  eleventyConfig.addPlugin(pluginSEO, {
+    title: "David Balatero",
+    author: "David Balatero",
+    url: "https://balatero.com",
+    twitter: "dbalatero",
+    options: {
+      titleDivider: "|",
+    },
   });
 
   return {
