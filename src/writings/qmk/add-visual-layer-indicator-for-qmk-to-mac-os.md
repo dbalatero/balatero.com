@@ -289,6 +289,8 @@ function LayerIndicator:setLayer(layer)
   self.layer = layer
   self:render()
 end
+
+return LayerIndicator
 ```
 
 </div>
