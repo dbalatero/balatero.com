@@ -155,7 +155,7 @@ I: got edid.serial: 75066T2
 I: got edid.name: DELL U3419W
 D: action: i: ?
 D: querying VCP control: #96 =?
-I: VCP control #96 (0x60) = current: 15, max: 18
+I: VCP control #96 (0x60) = current: 27, max: 18
 ```
 
 ## Create a Hammerspoon hotkey to switch the display
