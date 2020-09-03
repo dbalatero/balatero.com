@@ -1,5 +1,8 @@
 ---
 layout: article
+excerpt: >
+  Create a system hotkey on your Mac to quickly switch between your monitor's
+  input sources using Hammerspoon and the open-source ddcctl program.
 date: 2020-09-01
 title: Create a quick monitor input switcher with Hammerspoon
 tags:
@@ -55,7 +58,7 @@ Graphics/Displays:
           Resolution: 3440 x 1440 (UWQHD - Ultra-Wide Quad HD)
           UI Looks like: 3440 x 1440 @ 60 Hz
           Framebuffer Depth: 30-Bit Color (ARGB2101010)
-          Display Serial Number: 75066T2     
+          Display Serial Number: 75066T2
           Main Display: Yes
           Mirror: Off
           Online: Yes
