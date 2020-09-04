@@ -7,7 +7,7 @@ excerpt: My writings. Mostly random programming/tooling tips.
 <h1>Writings</h1>
 
 <ul>
-  {% for article in collections.writings %}
+  {% for article in collections.writings | reverse %}
     <li>
       <span class="mono-date">{{ article.date.toLocaleDateString() }}</span>
       <a href="{{ article.url }}">{{ article.data.title }}</a>
