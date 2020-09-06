@@ -65,6 +65,26 @@ module.exports = function(eleventyConfig) {
     tags: ['h2', 'h3', 'h4'],
   });
 
+  eleventyConfig.addCollection("writingTags", function(collection) {
+    const writings = collection
+      .items
+      .filter(item => item.data.tags && item.data.tags.includes("writings"));
+
+    console.log(writings);
+
+    const tags = new Set();
+
+    writings.forEach(writing => {
+      writing.data.tags.forEach(tag => {
+        tags.add(tag);
+      })
+    });
+
+    tags.delete('writings');
+
+    return Array.from(tags);
+  });
+
   // Images
   eleventyConfig.addPassthroughCopy("assets/images");
 

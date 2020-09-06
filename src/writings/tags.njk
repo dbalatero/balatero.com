@@ -1,13 +1,17 @@
 ---
 layout: main
-title: writings
-excerpt: My writings. Mostly random programming/tooling tips.
+pagination:
+  data: collections.writingTags
+  size: 1
+  alias: tag
+permalink: /writings/{{ tag }}/
 ---
 
-<h1>Writings</h1>
+<h1>Writings about '{{ tag }}'</h1>
 
 <ul>
-  {% for article in collections.writings | reverse %}
+  {% set writings = collections[ tag ] %}
+  {% for article in writings | withTag("writings") | reverse %}
     <li>
       <span class="mono-date">{{ article.date.toLocaleDateString() }}</span>
       <a href="{{ article.url }}">{{ article.data.title }}</a>

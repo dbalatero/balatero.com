@@ -114,14 +114,18 @@ header {
   margin-left: 1rem;
 }
 
-.tag-list__tag {
+a.tag-list__tag {
   background: #777;
   color: #eee;
   text-decoration: none;
-  cursor: none;
+  cursor: pointer;
   padding: 0 0.25rem;
   border-radius: 4px;
   display: inline-block;
+
+  &:hover, &:visited {
+    background: #777;
+  }
 }
 
 /* inline code */
