@@ -3,6 +3,12 @@ layout: main
 ---
 <div class="article">
   <h1>{{ title }}</h1>
+
+  <aside>
+    {{ content | toc | safe }}
+  </aside>
+
+  <hr />
   <em>{{ date.toLocaleDateString() }}</em>
 
   {{ content | safe }}

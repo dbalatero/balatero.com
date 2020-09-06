@@ -19,7 +19,7 @@ directory whenever I wanted to use [fzf.vim](https://github.com/junegunn/fzf.vim
 Enter [proximity-sort](https://github.com/jonhoo/proximity-sort). This tool
 will sort a list of files by the proximity to a given file.
 
-## Installing
+## Installing proximity-sort
 
 You'll need Rust if you don't have it:
 

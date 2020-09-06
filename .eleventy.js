@@ -1,5 +1,6 @@
 const pluginSass = require("eleventy-plugin-sass");
 const pluginSEO = require("eleventy-plugin-seo");
+const pluginTOC = require('eleventy-plugin-toc');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const markdownIt = require('markdown-it');
@@ -60,6 +61,9 @@ module.exports = function(eleventyConfig) {
       .use(markdownItAnchor, mdAnchorOpts)
   )
 
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2', 'h3', 'h4'],
+  });
 
   // Images
   eleventyConfig.addPassthroughCopy("assets/images");
