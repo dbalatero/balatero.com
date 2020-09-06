@@ -2,6 +2,9 @@ const pluginSass = require("eleventy-plugin-sass");
 const pluginSEO = require("eleventy-plugin-seo");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+
 function withTag(array, tag) {
   return array.filter(item => item.data.tags.includes(tag))
 };
@@ -26,7 +29,39 @@ function dateDisplay(date, format) {
   return date;
 }
 
+function anchorSlug(string) {
+  return String(string)
+    .trim()
+    .replace(/[^\w\s]/g, '')
+    .replace(/\s+/g, '-')
+    .toLowerCase()
+}
+
 module.exports = function(eleventyConfig) {
+  // Markdown
+  const mdOptions = {
+    html: true,
+    breaks: false,
+    linkify: true,
+    typographer: true
+  };
+
+  const mdAnchorOpts = {
+    permalink: true,
+    permalinkClass: 'anchor-link',
+    permalinkSymbol: '#',
+    slugify: anchorSlug,
+    level: [1, 2, 3, 4]
+  };
+
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt(mdOptions)
+      .use(markdownItAnchor, mdAnchorOpts)
+  )
+
+
+  // Images
   eleventyConfig.addPassthroughCopy("assets/images");
 
   eleventyConfig.addFilter('dateDisplay', dateDisplay);
