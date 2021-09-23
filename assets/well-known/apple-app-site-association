@@ -1,11 +1,12 @@
-  {
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "98P6JWUN5K.com.stripe.GameDemo",
-                "paths": [ "/cool_deep_link" ]
-            }
-        ]
-    }
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "Y28TH9SHX7.com.stripe.GameDemo",
+        "paths": [ "*"]
+      }
+    ]
+  }
 }
+
