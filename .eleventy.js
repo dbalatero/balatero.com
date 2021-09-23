@@ -87,6 +87,9 @@ module.exports = function(eleventyConfig) {
 
   // Images
   eleventyConfig.addPassthroughCopy("assets/images");
+  eleventyConfig.addPassthroughCopy({
+    "assets/well-known": ".well-known",
+  });
 
   eleventyConfig.addFilter('dateDisplay', dateDisplay);
   eleventyConfig.addFilter('httpUrl', httpUrl);
